@@ -10,6 +10,7 @@ const pkg = require('./packageJson');
 const checkTemplateHasReact = require('../utils/checkTemplateHasReact');
 const debug = require('../debug');
 const paths = require('./paths');
+const getEntryHtmlPlugins = require('./getEntryHtmlPlugins');
 
 /**
  * 可以在 buildConfig 中覆盖的配置项:
@@ -69,7 +70,7 @@ module.exports = function getWebpackConfigBasic({ entry, buildConfig = {} }) {
     module: {
       rules: getRules(buildConfig),
     },
-    plugins: getPlugins({ entry, buildConfig, themeConfig }),
+    plugins: getPlugins({ buildConfig, themeConfig }),
     optimization: {
       splitChunks: {
         cacheGroups: {
@@ -94,6 +95,12 @@ module.exports = function getWebpackConfigBasic({ entry, buildConfig = {} }) {
   } else {
     finalWebpackConfig.entry = processEntry(getEntryByPages());
   }
+
+  // 增加 html 输出，支持多页面应用
+  Array.prototype.push.apply(
+    finalWebpackConfig.plugins,
+    getEntryHtmlPlugins(finalWebpackConfig.entry)
+  );
 
   return finalWebpackConfig;
 };

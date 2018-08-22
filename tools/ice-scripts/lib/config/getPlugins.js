@@ -11,9 +11,8 @@ const WebpackPluginImport = require('webpack-plugin-import');
 const AppendStyleWebpackPlugin = require('../plugins/append-style-webpack-plugin');
 const normalizeEntry = require('../utils/normalizeEntry');
 const paths = require('./paths');
-const getEntryHtmlPlugins = require('./getEntryHtmlPlugins');
 
-module.exports = function({ buildConfig = {}, themeConfig = {}, entry }) {
+module.exports = function({ buildConfig = {}, themeConfig = {} }) {
   const defineVriables = {
     'process.env.NODE_ENV': JSON.stringify(
       process.env.NODE_ENV || 'development'
@@ -64,9 +63,6 @@ module.exports = function({ buildConfig = {}, themeConfig = {}, entry }) {
       },
     ]),
   ];
-
-  // 增加 html 输出，支持多页面应用
-  Array.prototype.push.apply(plugins, getEntryHtmlPlugins(entry));
 
   if (paths.publicUrl === './') {
     console.log(
