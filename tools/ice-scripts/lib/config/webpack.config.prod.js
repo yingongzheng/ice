@@ -8,7 +8,7 @@ module.exports = function getWebpackConfigProd({ entry, buildConfig }) {
   const baseConfig = getWebpackConfigBasic({ entry, buildConfig });
 
   return webpackMerge(baseConfig, {
-    devtool: 'none',
+    devtool: !process.env.BUILD_SOURCEMAP ? 'none' : 'source-map',
     optimization: {
       minimize: !process.env.BUILD_DEBUG,
       minimizer: [

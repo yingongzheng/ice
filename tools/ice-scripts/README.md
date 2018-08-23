@@ -21,3 +21,4 @@ Cli dev tool for ice.
 | --host  | 设置服务主机名                  | `ice dev --host=127.0.0.1` |
 | --hash  | 开启构建 hash 文件格式          | `ice build --hash`         |
 | --debug | 开启构建 debug 模式不压缩代码   | `ice build --debug`        |
+| --sourcemap | 生成 sourcemap   | `ice build --sourcemap`        |
