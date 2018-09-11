@@ -104,10 +104,9 @@ export default class IceLayoutAside extends Component {
 
     const widthValue = typeof width === 'number' ? `${width}px` : width;
 
-    const collapsedWidthValue =
-      typeof collapsedWidth === 'number'
-        ? `${collapsedWidth}px`
-        : collapsedWidth;
+    const collapsedWidthValue = typeof collapsedWidth === 'number'
+      ? `${collapsedWidth}px`
+      : collapsedWidth;
 
     const asideStyle = {
       ...style,

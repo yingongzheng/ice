@@ -1,6 +1,6 @@
 {
   "name": "@icedesign/layout",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "提供页面框架性的 layout 组件",
   "main": "lib/index.js",
   "files": [
@@ -21,7 +21,7 @@
     "ice-components"
   ],
   "dependencies": {
-    "@icedesign/base": "^0.1.0",
+    "@icedesign/base": "^0.2.5",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "*"
@@ -30,10 +30,10 @@
     "@icedesign/img": "^0.1.0",
     "@icedesign/menu": "^0.1.0",
     "@icedesign/title": "^0.1.0",
-    "babel-eslint": "^8.0.3",
-    "eslint": "^4.13.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-babel": "^4.1.1",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-babel": "^5.2.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
@@ -43,5 +43,11 @@
   "scripts": {
     "lint": "eslint . --ext '.js,.jsx' --fix",
     "prepublish": "npm run lint"
+  },
+  "fusionConfig": {
+    "docs": "demo/",
+    "variable": "lib/scss/variable.scss",
+    "entry": "lib/index.scss",
+    "deps": []
   }
 }

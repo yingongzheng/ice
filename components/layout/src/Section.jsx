@@ -23,10 +23,10 @@ export default class IceLayoutSection extends Component {
 
     Children.forEach(children, (child) => {
       if (
-        child &&
-        child.type &&
-        child.type.displayName &&
-        child.type.displayName === 'IceLayoutAside'
+        child
+        && child.type
+        && child.type.displayName
+        && child.type.displayName === 'IceLayoutAside'
       ) {
         hasSider = true;
       }

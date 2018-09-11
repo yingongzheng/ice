@@ -1,6 +1,6 @@
 {
   "name": "dynamic-icon",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "动态 Icon 组件",
   "main": "lib/index.js",
   "files": [
@@ -21,17 +21,16 @@
     "ice-component"
   ],
   "dependencies": {
-    "@icedesign/base": "^0.1.4",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
+    "@icedesign/base": "^0.2.5",
     "@icedesign/skin": "^0.1.9",
     "copy-to-clipboard": "^3.0.8",
     "react-copy-to-clipboard": "^5.0.1"
   },
   "publishConfig": {
-    "registry": "http://registry.npmjs.com",
     "access": "public"
   },
   "fusionConfig": {

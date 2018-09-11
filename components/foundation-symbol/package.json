@@ -1,6 +1,6 @@
 {
   "name": "foundation-symbol",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   },
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "@icedesign/base": "^0.1.4",
+    "@icedesign/base": "0.x",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0"
   },
