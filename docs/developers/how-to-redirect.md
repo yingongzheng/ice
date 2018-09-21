@@ -64,6 +64,7 @@ class ShowTheLocation extends React.Component {
   };
 
   handleHistoryReplace = () => {
+    const { history } = this.props;
     history.replace('/new-path');
   };
 
